@@ -1,0 +1,31 @@
+{
+  "name": "TO-DO-WEBAPP",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client:start": "cd client && npm start && cd ..",
+    "server:start": "nodemon server/index.js",
+    "start": "concurrently --kill-others-on-fail \"npm run server:start\" \"npm run client:start\"",
+    "install-deps": "npm install && cd client && npm install && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Toba99/TO-DO-WEBAPP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Toba99/TO-DO-WEBAPP/issues"
+  },
+  "homepage": "https://github.com/Toba99/TO-DO-WEBAPP#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  }
+}
